@@ -1,0 +1,93 @@
+﻿body {
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 136px;
+}
+
+.albumProfile {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    margin-bottom: 55px;
+}
+
+.albumImage {
+    width: 226px;
+    height: 226px;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+.albumName {
+    margin-left: 5%;
+    font-size: 48px;
+    width: 50%;
+    color: #FEE715;
+}
+
+.lineCtn {
+    display: flex;
+    flex-direction: row;
+}
+
+.line {
+    height: 3px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 66px;
+    background-color: #FEE715;
+}
+
+.albumDetail {
+    margin-bottom: 102px;
+}
+
+.descTitleLbl, .priceTitleLbl, .stockTitleLbl {
+    color: #FEE715;
+    font-size: 24px;
+}
+
+.desc {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 42px;
+}
+
+.content {
+    width: 80%;
+    font-weight: 500;
+}
+
+.addToCart {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
+.qtyTxtBox {
+    width: 150px;
+    height: 20px;
+    background: #D9D9D9;
+    border-radius: 25px;
+}
+
+.addToCartBtn {
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    border-radius: 40px;
+    color: #101820;
+}
+
+.errorMsg {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 150px;
+    font-weight: 500;
+}

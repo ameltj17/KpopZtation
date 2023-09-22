@@ -1,0 +1,33 @@
+﻿<Properties StartupConfiguration="{8A4CF555-38DC-4F5C-8B6A-B4E9F67C6958}|">
+  <MonoDevelop.Ide.ItemProperties.KpopZtation PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="KpopZtation/Views/AlbumDetail/AlbumDetail.aspx">
+    <Files>
+      <File FileName="KpopZtation/Web.config" Line="39" Column="20" />
+      <File FileName="KpopZtation/Repository/AlbumRepository.cs" Line="1" Column="1" />
+      <File FileName="KpopZtation/Views/AlbumDetail/AlbumDetail.aspx" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="KpopZtation" expanded="True">
+            <Node name="KpopZtation" expanded="True">
+              <Node name="Repository" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="AlbumDetail" expanded="True">
+                  <Node name="AlbumDetail.aspx" selected="True" />
+                </Node>
+              </Node>
+              <Node name="Web.config" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

@@ -1,0 +1,105 @@
+﻿body {
+    background-color: #101820;
+}
+
+.banner {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.slides {
+    display: none;
+    width: 100%;
+    height: auto;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 10%;
+}
+
+    .title h1 {
+        margin: 0 0;
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+
+    .title h3 {
+        margin: 0 0;
+        font-weight: 700;
+        margin-bottom: 40px;
+    }
+
+.artistList {
+    display: flex;
+    justify-content: center;
+}
+
+.artistTable {
+    width: 80%;
+}
+
+.artistImg {
+    margin: 0 auto;
+    background-color: blue;
+}
+
+.artistDetail-ctn {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+    .artistDetail-ctn p {
+        color: #FEE715;
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 500;
+    }
+
+.btn {
+    width: 50%;
+    margin: 0 auto;
+    border: solid 2px white;
+    border-radius: 25px;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+    .btn:hover {
+        background-color: rgba(255, 255, 255, 0.31);
+        cursor: pointer;
+    }
+
+.insertBtnCtn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.insertArtistBtn {
+    margin-bottom: 80px;
+    margin-top: 20px;
+    border: solid 2px white;
+    border-radius: 25px;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    width: 30%;
+    height: 40px;
+}
+
+    .insertArtistBtn:hover {
+        background-color: rgba(255, 255, 255, 0.31);
+        cursor: pointer;
+    }

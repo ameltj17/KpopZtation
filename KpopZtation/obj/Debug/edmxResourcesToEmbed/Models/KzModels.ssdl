@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="KzModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="albums">
+    <Key>
+      <PropertyRef Name="albumId" />
+    </Key>
+    <Property Name="albumId" Type="int" Nullable="false" />
+    <Property Name="artistId" Type="int" Nullable="false" />
+    <Property Name="albumName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="albumImage" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="albumPrice" Type="int" Nullable="false" />
+    <Property Name="albumStock" Type="int" Nullable="false" />
+    <Property Name="albumDescription" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="artists">
+    <Key>
+      <PropertyRef Name="artistId" />
+    </Key>
+    <Property Name="artistId" Type="int" Nullable="false" />
+    <Property Name="artistName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="artistImage" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="carts">
+    <Key>
+      <PropertyRef Name="customerId" />
+      <PropertyRef Name="albumId" />
+    </Key>
+    <Property Name="customerId" Type="int" Nullable="false" />
+    <Property Name="albumId" Type="int" Nullable="false" />
+    <Property Name="qty" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="customers">
+    <Key>
+      <PropertyRef Name="customerId" />
+    </Key>
+    <Property Name="customerId" Type="int" Nullable="false" />
+    <Property Name="customerName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="customerEmail" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="customerPassword" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="customerGender" Type="varchar" MaxLength="6" Nullable="false" />
+    <Property Name="customerAddress" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="customerRole" Type="varchar" MaxLength="5" Nullable="false" />
+  </EntityType>
+  <EntityType Name="transactionDetails">
+    <Key>
+      <PropertyRef Name="transactionId" />
+      <PropertyRef Name="albumId" />
+    </Key>
+    <Property Name="transactionId" Type="int" Nullable="false" />
+    <Property Name="albumId" Type="int" Nullable="false" />
+    <Property Name="qty" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="transactionHeaders">
+    <Key>
+      <PropertyRef Name="transactionId" />
+    </Key>
+    <Property Name="transactionId" Type="int" Nullable="false" />
+    <Property Name="transactionDate" Type="date" Nullable="false" />
+    <Property Name="customerId" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_albums_artists">
+    <End Role="artists" Type="Self.artists" Multiplicity="1" />
+    <End Role="albums" Type="Self.albums" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="artists">
+        <PropertyRef Name="artistId" />
+      </Principal>
+      <Dependent Role="albums">
+        <PropertyRef Name="artistId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_carts_albums">
+    <End Role="albums" Type="Self.albums" Multiplicity="1" />
+    <End Role="carts" Type="Self.carts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="albums">
+        <PropertyRef Name="albumId" />
+      </Principal>
+      <Dependent Role="carts">
+        <PropertyRef Name="albumId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_carts_customers">
+    <End Role="customers" Type="Self.customers" Multiplicity="1" />
+    <End Role="carts" Type="Self.carts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customers">
+        <PropertyRef Name="customerId" />
+      </Principal>
+      <Dependent Role="carts">
+        <PropertyRef Name="customerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_transactionDetails_albums">
+    <End Role="albums" Type="Self.albums" Multiplicity="1" />
+    <End Role="transactionDetails" Type="Self.transactionDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="albums">
+        <PropertyRef Name="albumId" />
+      </Principal>
+      <Dependent Role="transactionDetails">
+        <PropertyRef Name="albumId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_transactionDetails_transactionHeaders">
+    <End Role="transactionHeaders" Type="Self.transactionHeaders" Multiplicity="1" />
+    <End Role="transactionDetails" Type="Self.transactionDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="transactionHeaders">
+        <PropertyRef Name="transactionId" />
+      </Principal>
+      <Dependent Role="transactionDetails">
+        <PropertyRef Name="transactionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_transactionHeaders_customers">
+    <End Role="customers" Type="Self.customers" Multiplicity="1" />
+    <End Role="transactionHeaders" Type="Self.transactionHeaders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customers">
+        <PropertyRef Name="customerId" />
+      </Principal>
+      <Dependent Role="transactionHeaders">
+        <PropertyRef Name="customerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="KzModelStoreContainer">
+    <EntitySet Name="albums" EntityType="Self.albums" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="artists" EntityType="Self.artists" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="carts" EntityType="Self.carts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="customers" EntityType="Self.customers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="transactionDetails" EntityType="Self.transactionDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="transactionHeaders" EntityType="Self.transactionHeaders" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_albums_artists" Association="Self.FK_albums_artists">
+      <End Role="artists" EntitySet="artists" />
+      <End Role="albums" EntitySet="albums" />
+    </AssociationSet>
+    <AssociationSet Name="FK_carts_albums" Association="Self.FK_carts_albums">
+      <End Role="albums" EntitySet="albums" />
+      <End Role="carts" EntitySet="carts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_carts_customers" Association="Self.FK_carts_customers">
+      <End Role="customers" EntitySet="customers" />
+      <End Role="carts" EntitySet="carts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_transactionDetails_albums" Association="Self.FK_transactionDetails_albums">
+      <End Role="albums" EntitySet="albums" />
+      <End Role="transactionDetails" EntitySet="transactionDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_transactionDetails_transactionHeaders" Association="Self.FK_transactionDetails_transactionHeaders">
+      <End Role="transactionHeaders" EntitySet="transactionHeaders" />
+      <End Role="transactionDetails" EntitySet="transactionDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_transactionHeaders_customers" Association="Self.FK_transactionHeaders_customers">
+      <End Role="customers" EntitySet="customers" />
+      <End Role="transactionHeaders" EntitySet="transactionHeaders" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

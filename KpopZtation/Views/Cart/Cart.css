@@ -1,0 +1,77 @@
+﻿body {
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 136px;
+}
+
+h1 {
+    font-size: 48px;
+    color: #FEE715;
+}
+
+.lineCtn {
+    display: flex;
+    flex-direction: row;
+}
+
+.line {
+    height: 3px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 66px;
+    background-color: #FEE715;
+}
+
+.cartList {
+    display: flex;
+    justify-content: center;
+}
+
+.cartTable {
+    margin-bottom: 90px;
+}
+
+.albumImage {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+.nameLabel {
+    font-size: 36px;
+    font-weight: 700;
+    color: #FEE715;
+    margin-bottom: 7px;
+}
+
+.descLabel {
+    font-size: 24px;
+    font-weight: 500;
+    color: #FFFF;
+    width: 30%;
+}
+
+.qtyLabel {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+    color: #FFFF;
+}
+
+.priceLabel {
+    font-size: 24px;
+    font-weight: 500;
+    color: #FFFF;
+}
+
+.removeBtn {
+    color: #101820;
+    background-color: #D9D9D9;
+    border-radius: 25px;
+    width: 120px;
+    height: 50px;
+}

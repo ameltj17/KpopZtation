@@ -1,0 +1,78 @@
+﻿body {
+}
+
+.artistDetail {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+    margin-top: 136px;
+    margin-bottom: 55px;
+}
+
+.artistImage {
+    width: 226px;
+    height: 226px;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+.artistName {
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+    margin-left: 5%;
+    font-size: 48px;
+    width: 50%;
+}
+
+.lineCtn {
+    display: flex;
+    flex-direction: row;
+}
+
+.line {
+    height: 3px;
+    background-color: #FEE715;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.albumList {
+    display: flex;
+    justify-content: center;
+}
+
+.albumTable {
+    width: 80%;
+    margin-bottom: 90px;
+}
+
+.albumImage {
+    width: 166px;
+    height: 166px;
+    object-fit: cover;
+    border-radius: 25px;
+    margin: 0 0;
+}
+
+.albumNameLbl {
+    font-size: 36px;
+    font-weight: 700;
+    color: #FEE715;
+    margin-bottom: 7px;
+}
+
+.albumDescLbl {
+    font-size: 24px;
+    font-weight: 500;
+    color: #FFFF;
+}
+
+.albumPriceLbl {
+    font-size: 24px;
+    font-weight: 500;
+    color: #FFFF;
+}

@@ -1,0 +1,41 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="NavBar.master.cs" Inherits="KpopZtation.Views.NavBar" %>
+
+<!DOCTYPE html>
+
+<html>
+    <head runat="server">
+        <title>KpopZtation</title>
+        <link rel="stylesheet" href="NavBar.css" />
+        <asp:ContentPlaceHolder ID="headPlaceHolder" runat="server">
+        </asp:ContentPlaceHolder>
+    </head>
+    <body>
+        <form id="form1" runat="server">
+            <div class="navBar">
+                <div class="left">
+                    <div class="logo">KPOPZTATION</div>
+                </div>
+                <div class="right">
+                    <asp:HyperLink ID="home" runat="server" href="../Home/Home.aspx">HOME</asp:HyperLink>
+                    <asp:HyperLink ID="login" runat="server" href="../Login/Login.aspx">LOG IN</asp:HyperLink>
+                    <asp:HyperLink ID="register" runat="server" href="../Register/Register.aspx">REGISTER</asp:HyperLink>
+                    <asp:HyperLink ID="cart" runat="server">CART</asp:HyperLink>
+                    <asp:HyperLink ID="transHis" runat="server">TRANSACTION HISTORY</asp:HyperLink>
+                    <asp:HyperLink ID="transReport" runat="server">TRANSACTION REPORT</asp:HyperLink>
+                    <asp:HyperLink ID="profile" runat="server">UPDATE PROFILE</asp:HyperLink>
+                    <asp:Button ID="logoutBtn" runat="server" Text="Log Out" OnClick="logoutBtn_Click" />
+                </div>
+            </div>
+
+            <div="content">
+                <asp:ContentPlaceHolder ID="contentPlaceHolder" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </form>
+
+        <div="script">
+            <asp:ContentPlaceHolder ID="scriptPlaceHolder" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b19148e0a0444ee3a37601fd4d00757f" Name="Diagram1" ZoomLevel="47">
+        <EntityTypeShape EntityType="KzModel.album" Width="1.5" PointX="3" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="KzModel.artist" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="KzModel.cart" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KzModel.customer" Width="1.5" PointX="0.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="KzModel.transactionDetail" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KzModel.transactionHeader" Width="1.5" PointX="3" PointY="7.875" IsExpanded="true" />
+        <AssociationConnector Association="KzModel.FK_albums_artists" ManuallyRouted="false" />
+        <AssociationConnector Association="KzModel.FK_carts_albums" ManuallyRouted="false" />
+        <AssociationConnector Association="KzModel.FK_transactionDetails_albums" ManuallyRouted="false" />
+        <AssociationConnector Association="KzModel.FK_carts_customers" ManuallyRouted="false" />
+        <AssociationConnector Association="KzModel.FK_transactionHeaders_customers" ManuallyRouted="false" />
+        <AssociationConnector Association="KzModel.FK_transactionDetails_transactionHeaders" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
